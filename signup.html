@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회원가입 — KIMKIMTRC</title>
+<meta name="description" content="KIMKIMTRC 크립토 자동매매 봇 무료 사전 가입">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{
+    --bg:#070a12; --bg2:#0c111d; --card:#111827; --line:#1f2937;
+    --text:#e6e9f0; --muted:#8b93a7; --accent:#2dd4bf; --accent2:#f5c451;
+    --up:#34d399; --down:#f87171; --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Pretendard,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+  body::before{content:"";position:fixed;top:-250px;right:-250px;width:700px;height:700px;background:radial-gradient(circle,rgba(45,212,191,.13),transparent 60%);pointer-events:none}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.12em}
+  .logo i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0ea5e9);display:grid;place-items:center;font-style:normal;color:#04111a;font-size:14px}
+  .back{font-size:14px;color:var(--muted)}
+  .back:hover{color:var(--text)}
+
+  .layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;padding:64px 0 96px;align-items:start}
+  .eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  h1{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:12px 0 16px;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:17px}
+  .perks{list-style:none;margin-top:32px;display:grid;gap:14px}
+  .perks li{display:flex;gap:12px;font-size:15px;color:#cbd2de}
+  .perks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:8px;background:rgba(45,212,191,.12);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:13px}
+  .safe{margin-top:32px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);font-size:14px;color:var(--muted)}
+  .safe b{color:var(--text)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  .card h2{font-size:22px;margin-bottom:6px}
+  .card .hint{font-size:14px;color:var(--muted);margin-bottom:28px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:18px}
+  label.l{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+  label.l small{font-weight:400;color:var(--muted)}
+  input[type=text],input[type=email],select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit;font-size:15px;transition:.2s}
+  input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,212,191,.15)}
+  input::placeholder{color:#4b5563}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips label{cursor:pointer}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:99px;font-size:14px;color:var(--muted);transition:.2s}
+  .chips input:checked+span{border-color:var(--accent);color:var(--accent);background:rgba(45,212,191,.08)}
+  .chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(45,212,191,.25)}
+  .agree{border-top:1px solid var(--line);margin-top:8px;padding-top:20px;display:grid;gap:12px}
+  .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#cbd2de;cursor:pointer}
+  .check input{margin-top:4px;accent-color:var(--accent);width:16px;height:16px;flex:none}
+  .check em{font-style:normal;color:var(--accent);font-weight:700}
+  details.terms{font-size:13px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  details.terms summary{cursor:pointer}
+  details.terms p{margin-top:8px;line-height:1.7}
+  .btn{width:100%;margin-top:24px;padding:15px;border:0;border-radius:12px;background:var(--accent);color:#04111a;font:inherit;font-weight:800;font-size:16px;cursor:pointer;transition:.2s}
+  .btn:hover{filter:brightness(1.1)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  .note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+
+  .done{text-align:center;padding:24px 8px}
+  .done .big{width:72px;height:72px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--up);font-size:34px}
+  .done p{color:var(--muted);margin:10px 0 28px}
+  .done a{display:inline-block;padding:12px 22px;border:1px solid var(--line);border-radius:12px;font-weight:700}
+  .done a:hover{border-color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--muted)}
+
+  @media (max-width:900px){.layout{grid-template-columns:1fr;gap:40px;padding-top:40px}}
+  @media (max-width:520px){.card{padding:26px 20px}.row{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="logo"><i>K</i>KIMKIMTRC</a>
+      <a href="index.html" class="back">← 홈으로</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <div>
+    <div class="eyebrow">Free signup</div>
+    <h1>첫 봇은 무료로<br>시작하세요</h1>
+    <p class="sub">가입하시면 모의 투자 모드와 커뮤니티에 우선 초대해 드립니다.</p>
+    <ul class="perks">
+      <li>모의 투자 모드로 실제 자금 없이 전략 테스트</li>
+      <li>Grid · DCA 기본 봇 무료 제공</li>
+      <li>텔레그램 · 디스코드 커뮤니티 초대</li>
+      <li>신규 전략과 리스크 노트 우선 안내</li>
+    </ul>
+    <div class="safe">
+      <b>🔒 비밀번호나 API 키를 묻지 않습니다.</b><br>
+      가입 단계에서는 연락처만 받습니다. 거래소 연결은 안내 메일을 받은 뒤 직접 진행하시면 됩니다.
+    </div>
+  </div>
+
+  <div class="card" id="card">
+    <form id="form" action="https://formsubmit.co/ceo@kimkimtrc.com" method="POST">
+      <h2>회원가입</h2>
+      <p class="hint">1분이면 끝납니다. <span style="color:var(--down)">*</span> 표시는 필수 항목입니다.</p>
+
+      <!-- FormSubmit 설정 -->
+      <input type="hidden" name="_subject" value="[KIMKIMTRC] 새 회원가입 신청">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kimkimtrc.com/signup.html?done=1">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="row">
+        <div class="field">
+          <label class="l" for="name">닉네임 <span style="color:var(--down)">*</span></label>
+          <input type="text" id="name" name="닉네임" required maxlength="30" placeholder="예: satoshi">
+        </div>
+        <div class="field">
+          <label class="l" for="tg">텔레그램 ID <small>(선택)</small></label>
+          <input type="text" id="tg" name="텔레그램" maxlength="40" placeholder="@username">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="l" for="email">이메일 <span style="color:var(--down)">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label class="l" for="exp">투자 경험</label>
+          <select id="exp" name="투자경험">
+            <option>처음이에요</option>
+            <option>1년 미만</option>
+            <option>1~3년</option>
+            <option>3년 이상</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="l" for="ex">주로 쓰는 거래소</label>
+          <select id="ex" name="거래소">
+            <option>아직 없음</option>
+            <option>Binance</option>
+            <option>Bybit</option>
+            <option>OKX</option>
+            <option>Bitget</option>
+            <option>업비트</option>
+            <option>빗썸</option>
+            <option>기타</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="l" style="display:block;font-size:14px;font-weight:700;margin-bottom:8px">관심 있는 전략 <small style="font-weight:400;color:var(--muted)">(복수 선택)</small></span>
+        <div class="chips">
+          <label><input type="checkbox" name="관심전략" value="Grid"><span>Grid</span></label>
+          <label><input type="checkbox" name="관심전략" value="DCA"><span>DCA</span></label>
+          <label><input type="checkbox" name="관심전략" value="Trend"><span>Trend</span></label>
+          <label><input type="checkbox" name="관심전략" value="Arbitrage"><span>Arbitrage</span></label>
+          <label><input type="checkbox" name="관심전략" value="잘 모르겠음"><span>잘 모르겠어요</span></label>
+        </div>
+      </div>
+
+      <div class="agree">
+        <label class="check"><input type="checkbox" id="all"> <span><b>전체 동의</b></span></label>
+        <label class="check"><input type="checkbox" class="req" name="개인정보수집동의" value="동의" required> <span><em>[필수]</em> 개인정보 수집 및 이용에 동의합니다.</span></label>
+        <details class="terms">
+          <summary>내용 보기</summary>
+          <p>· 수집 항목: 닉네임, 이메일, 텔레그램 ID(선택), 투자 경험, 거래소, 관심 전략<br>
+          · 이용 목적: 서비스 가입 안내, 커뮤니티 초대, 문의 응대<br>
+          · 보유 기간: 회원 탈퇴 또는 삭제 요청 시까지 (요청: ceo@kimkimtrc.com)<br>
+          · 동의를 거부할 수 있으나, 이 경우 가입이 제한됩니다.</p>
+        </details>
+        <label class="check"><input type="checkbox" class="req" name="위험고지확인" value="확인" required> <span><em>[필수]</em> 가상자산 투자는 원금 손실 위험이 있으며, 수익이 보장되지 않음을 이해했습니다.</span></label>
+        <label class="check"><input type="checkbox" name="마케팅수신" value="동의"> <span>[선택] 신규 전략·이벤트 소식을 이메일로 받겠습니다.</span></label>
+      </div>
+
+      <button class="btn" type="submit" id="submit">무료로 가입하기 →</button>
+      <p class="note">가입은 무료이며, 언제든 탈퇴를 요청할 수 있습니다.</p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 KIMKIMTRC. All rights reserved. · 문의 ceo@kimkimtrc.com</div>
+</footer>
+
+<script>
+  // 가입 완료 후 돌아왔을 때 완료 화면 표시
+  if (new URLSearchParams(location.search).get('done')) {
+    document.getElementById('card').innerHTML =
+      '<div class="done"><div class="big">✓</div><h2>가입 신청이 완료되었습니다</h2>' +
+      '<p>입력하신 이메일로 시작 안내를 보내드릴게요.<br>메일이 보이지 않으면 스팸함도 확인해 주세요.</p>' +
+      '<a href="index.html">홈으로 돌아가기</a></div>';
+  }
+
+  // 전체 동의
+  const all = document.getElementById('all');
+  const boxes = document.querySelectorAll('.agree input[type=checkbox]:not(#all)');
+  all?.addEventListener('change', () => boxes.forEach(b => b.checked = all.checked));
+  boxes.forEach(b => b.addEventListener('change', () => all.checked = [...boxes].every(x => x.checked)));
+
+  // 중복 제출 방지
+  document.getElementById('form')?.addEventListener('submit', () => {
+    const btn = document.getElementById('submit');
+    btn.disabled = true;
+    btn.textContent = '보내는 중…';
+  });
+  // 뒤로가기로 돌아왔을 때 버튼 복구
+  window.addEventListener('pageshow', () => {
+    const btn = document.getElementById('submit');
+    if (btn) { btn.disabled = false; btn.textContent = '무료로 가입하기 →'; }
+  });
+</script>
+</body>
+</html>
