@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>회원가입 — KIMKIMTRC</title>
-<meta name="description" content="KIMKIMTRC 크립토 자동매매 봇 무료 사전 가입">
+<title>무료 레벨테스트 신청 — KIMKIMTRC</title>
+<meta name="description" content="KIMKIMTRC 영어 교육 무료 레벨테스트 신청">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
-    --bg:#070a12; --bg2:#0c111d; --card:#111827; --line:#1f2937;
-    --text:#e6e9f0; --muted:#8b93a7; --accent:#2dd4bf; --accent2:#f5c451;
-    --up:#34d399; --down:#f87171; --radius:16px;
+    --bg:#fbfaf7; --bg2:#f3f1ea; --card:#ffffff; --line:#e7e3d8;
+    --text:#1d2433; --muted:#667085; --accent:#2f6fed; --accent2:#ffb648;
+    --up:#1f9d6b; --down:#e5484d; --radius:16px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:Pretendard,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
-  body::before{content:"";position:fixed;top:-250px;right:-250px;width:700px;height:700px;background:radial-gradient(circle,rgba(45,212,191,.13),transparent 60%);pointer-events:none}
+  body::before{content:"";position:fixed;top:-250px;right:-250px;width:700px;height:700px;background:radial-gradient(circle,rgba(47,111,237,.10),transparent 60%);pointer-events:none}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 
   header{border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:64px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.12em}
-  .logo i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0ea5e9);display:grid;place-items:center;font-style:normal;color:#04111a;font-size:14px}
+  .logo i{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center;font-style:normal;color:#fff;font-size:14px}
   .back{font-size:14px;color:var(--muted)}
   .back:hover{color:var(--text)}
 
@@ -30,41 +30,41 @@
   h1{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:12px 0 16px;letter-spacing:-.02em}
   .sub{color:var(--muted);font-size:17px}
   .perks{list-style:none;margin-top:32px;display:grid;gap:14px}
-  .perks li{display:flex;gap:12px;font-size:15px;color:#cbd2de}
-  .perks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:8px;background:rgba(45,212,191,.12);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:13px}
+  .perks li{display:flex;gap:12px;font-size:15px;color:#344054}
+  .perks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:8px;background:#eef3ff;color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:13px}
   .safe{margin-top:32px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);font-size:14px;color:var(--muted)}
   .safe b{color:var(--text)}
 
-  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:36px;box-shadow:0 30px 70px rgba(29,36,51,.10)}
   .card h2{font-size:22px;margin-bottom:6px}
   .card .hint{font-size:14px;color:var(--muted);margin-bottom:28px}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .field{margin-bottom:18px}
   label.l{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
   label.l small{font-weight:400;color:var(--muted)}
-  input[type=text],input[type=email],select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit;font-size:15px;transition:.2s}
-  input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,212,191,.15)}
-  input::placeholder{color:#4b5563}
+  input[type=text],input[type=email],select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text);font:inherit;font-size:15px;transition:.2s}
+  input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,111,237,.15)}
+  input::placeholder{color:#98a2b3}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chips label{cursor:pointer}
   .chips input{position:absolute;opacity:0;pointer-events:none}
   .chips span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:99px;font-size:14px;color:var(--muted);transition:.2s}
-  .chips input:checked+span{border-color:var(--accent);color:var(--accent);background:rgba(45,212,191,.08)}
-  .chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(45,212,191,.25)}
+  .chips input:checked+span{border-color:var(--accent);color:var(--accent);background:#eef3ff}
+  .chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(47,111,237,.25)}
   .agree{border-top:1px solid var(--line);margin-top:8px;padding-top:20px;display:grid;gap:12px}
-  .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#cbd2de;cursor:pointer}
+  .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#344054;cursor:pointer}
   .check input{margin-top:4px;accent-color:var(--accent);width:16px;height:16px;flex:none}
   .check em{font-style:normal;color:var(--accent);font-weight:700}
   details.terms{font-size:13px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
   details.terms summary{cursor:pointer}
   details.terms p{margin-top:8px;line-height:1.7}
-  .btn{width:100%;margin-top:24px;padding:15px;border:0;border-radius:12px;background:var(--accent);color:#04111a;font:inherit;font-weight:800;font-size:16px;cursor:pointer;transition:.2s}
+  .btn{width:100%;margin-top:24px;padding:15px;border:0;border-radius:12px;background:var(--accent);color:#fff;font:inherit;font-weight:800;font-size:16px;cursor:pointer;transition:.2s}
   .btn:hover{filter:brightness(1.1)}
   .btn:disabled{opacity:.6;cursor:wait}
   .note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
 
   .done{text-align:center;padding:24px 8px}
-  .done .big{width:72px;height:72px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--up);font-size:34px}
+  .done .big{width:72px;height:72px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:#e7f6ef;color:var(--up);font-size:34px}
   .done p{color:var(--muted);margin:10px 0 28px}
   .done a{display:inline-block;padding:12px 22px;border:1px solid var(--line);border-radius:12px;font-weight:700}
   .done a:hover{border-color:var(--muted)}
@@ -88,40 +88,40 @@
 
 <main class="wrap layout">
   <div>
-    <div class="eyebrow">Free signup</div>
-    <h1>첫 봇은 무료로<br>시작하세요</h1>
-    <p class="sub">가입하시면 모의 투자 모드와 커뮤니티에 우선 초대해 드립니다.</p>
+    <div class="eyebrow">Free level test</div>
+    <h1>무료 레벨테스트로<br>시작하세요</h1>
+    <p class="sub">신청서를 남기시면 레벨테스트 일정을 메일로 안내해 드립니다.</p>
     <ul class="perks">
-      <li>모의 투자 모드로 실제 자금 없이 전략 테스트</li>
-      <li>Grid · DCA 기본 봇 무료 제공</li>
-      <li>텔레그램 · 디스코드 커뮤니티 초대</li>
-      <li>신규 전략과 리스크 노트 우선 안내</li>
+      <li>말하기·듣기·읽기 레벨테스트 무료</li>
+      <li>결과 정리와 1:1 학습 상담 무료</li>
+      <li>목표와 일정에 맞는 과정 추천</li>
+      <li>수강 여부는 결과를 보고 결정</li>
     </ul>
     <div class="safe">
-      <b>🔒 비밀번호나 API 키를 묻지 않습니다.</b><br>
-      가입 단계에서는 연락처만 받습니다. 거래소 연결은 안내 메일을 받은 뒤 직접 진행하시면 됩니다.
+      <b>🔒 연락처와 학습 목표만 받습니다.</b><br>
+      결제 정보는 묻지 않습니다. 레벨테스트 일정은 입력하신 이메일로 안내해 드립니다.
     </div>
   </div>
 
   <div class="card" id="card">
     <form id="form" action="https://formsubmit.co/ceo@kimkimtrc.com" method="POST">
-      <h2>회원가입</h2>
+      <h2>레벨테스트 신청</h2>
       <p class="hint">1분이면 끝납니다. <span style="color:var(--down)">*</span> 표시는 필수 항목입니다.</p>
 
       <!-- FormSubmit 설정 -->
-      <input type="hidden" name="_subject" value="[KIMKIMTRC] 새 회원가입 신청">
+      <input type="hidden" name="_subject" value="[KIMKIMTRC] 새 레벨테스트 신청">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://kimkimtrc.com/signup.html?done=1">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="row">
         <div class="field">
-          <label class="l" for="name">닉네임 <span style="color:var(--down)">*</span></label>
-          <input type="text" id="name" name="닉네임" required maxlength="30" placeholder="예: satoshi">
+          <label class="l" for="name">이름 <span style="color:var(--down)">*</span></label>
+          <input type="text" id="name" name="이름" required maxlength="30" placeholder="홍길동">
         </div>
         <div class="field">
-          <label class="l" for="tg">텔레그램 ID <small>(선택)</small></label>
-          <input type="text" id="tg" name="텔레그램" maxlength="40" placeholder="@username">
+          <label class="l" for="tg">연락처 <small>(선택)</small></label>
+          <input type="text" id="tg" name="연락처" maxlength="20" placeholder="010-0000-0000">
         </div>
       </div>
 
@@ -132,37 +132,33 @@
 
       <div class="row">
         <div class="field">
-          <label class="l" for="exp">투자 경험</label>
-          <select id="exp" name="투자경험">
-            <option>처음이에요</option>
-            <option>1년 미만</option>
-            <option>1~3년</option>
-            <option>3년 이상</option>
+          <label class="l" for="exp">지금 영어 수준</label>
+          <select id="exp" name="영어수준">
+            <option>거의 처음이에요</option>
+            <option>간단한 대화 가능</option>
+            <option>일상 대화 가능</option>
+            <option>업무에서 사용</option>
+            <option>잘 모르겠어요</option>
           </select>
         </div>
         <div class="field">
-          <label class="l" for="ex">주로 쓰는 거래소</label>
-          <select id="ex" name="거래소">
-            <option>아직 없음</option>
-            <option>Binance</option>
-            <option>Bybit</option>
-            <option>OKX</option>
-            <option>Bitget</option>
-            <option>업비트</option>
-            <option>빗썸</option>
-            <option>기타</option>
+          <label class="l" for="ex">원하는 수업 형태</label>
+          <select id="ex" name="수업형태">
+            <option>1:1 수업</option>
+            <option>소그룹 수업</option>
+            <option>상담 후 결정</option>
           </select>
         </div>
       </div>
 
       <div class="field">
-        <span class="l" style="display:block;font-size:14px;font-weight:700;margin-bottom:8px">관심 있는 전략 <small style="font-weight:400;color:var(--muted)">(복수 선택)</small></span>
+        <span class="l" style="display:block;font-size:14px;font-weight:700;margin-bottom:8px">학습 목표 <small style="font-weight:400;color:var(--muted)">(복수 선택)</small></span>
         <div class="chips">
-          <label><input type="checkbox" name="관심전략" value="Grid"><span>Grid</span></label>
-          <label><input type="checkbox" name="관심전략" value="DCA"><span>DCA</span></label>
-          <label><input type="checkbox" name="관심전략" value="Trend"><span>Trend</span></label>
-          <label><input type="checkbox" name="관심전략" value="Arbitrage"><span>Arbitrage</span></label>
-          <label><input type="checkbox" name="관심전략" value="잘 모르겠음"><span>잘 모르겠어요</span></label>
+          <label><input type="checkbox" name="학습목표" value="생활 회화"><span>생활 회화</span></label>
+          <label><input type="checkbox" name="학습목표" value="비즈니스 영어"><span>비즈니스 영어</span></label>
+          <label><input type="checkbox" name="학습목표" value="시험 영어"><span>시험 영어</span></label>
+          <label><input type="checkbox" name="학습목표" value="키즈·주니어"><span>키즈·주니어</span></label>
+          <label><input type="checkbox" name="학습목표" value="잘 모르겠음"><span>잘 모르겠어요</span></label>
         </div>
       </div>
 
@@ -171,17 +167,16 @@
         <label class="check"><input type="checkbox" class="req" name="개인정보수집동의" value="동의" required> <span><em>[필수]</em> 개인정보 수집 및 이용에 동의합니다.</span></label>
         <details class="terms">
           <summary>내용 보기</summary>
-          <p>· 수집 항목: 닉네임, 이메일, 텔레그램 ID(선택), 투자 경험, 거래소, 관심 전략<br>
-          · 이용 목적: 서비스 가입 안내, 커뮤니티 초대, 문의 응대<br>
+          <p>· 수집 항목: 이름, 이메일, 연락처(선택), 영어 수준, 수업 형태, 학습 목표<br>
+          · 이용 목적: 레벨테스트 일정 안내, 학습 상담, 문의 응대<br>
           · 보유 기간: 회원 탈퇴 또는 삭제 요청 시까지 (요청: ceo@kimkimtrc.com)<br>
           · 동의를 거부할 수 있으나, 이 경우 가입이 제한됩니다.</p>
         </details>
-        <label class="check"><input type="checkbox" class="req" name="위험고지확인" value="확인" required> <span><em>[필수]</em> 가상자산 투자는 원금 손실 위험이 있으며, 수익이 보장되지 않음을 이해했습니다.</span></label>
-        <label class="check"><input type="checkbox" name="마케팅수신" value="동의"> <span>[선택] 신규 전략·이벤트 소식을 이메일로 받겠습니다.</span></label>
+        <label class="check"><input type="checkbox" name="마케팅수신" value="동의"> <span>[선택] 새 과정·이벤트 소식을 이메일로 받겠습니다.</span></label>
       </div>
 
-      <button class="btn" type="submit" id="submit">무료로 가입하기 →</button>
-      <p class="note">가입은 무료이며, 언제든 탈퇴를 요청할 수 있습니다.</p>
+      <button class="btn" type="submit" id="submit">무료 레벨테스트 신청하기 →</button>
+      <p class="note">신청은 무료이며, 언제든 정보 삭제를 요청할 수 있습니다.</p>
     </form>
   </div>
 </main>
@@ -194,8 +189,8 @@
   // 가입 완료 후 돌아왔을 때 완료 화면 표시
   if (new URLSearchParams(location.search).get('done')) {
     document.getElementById('card').innerHTML =
-      '<div class="done"><div class="big">✓</div><h2>가입 신청이 완료되었습니다</h2>' +
-      '<p>입력하신 이메일로 시작 안내를 보내드릴게요.<br>메일이 보이지 않으면 스팸함도 확인해 주세요.</p>' +
+      '<div class="done"><div class="big">✓</div><h2>레벨테스트 신청이 완료되었습니다</h2>' +
+      '<p>입력하신 이메일로 레벨테스트 일정을 보내드릴게요.<br>메일이 보이지 않으면 스팸함도 확인해 주세요.</p>' +
       '<a href="index.html">홈으로 돌아가기</a></div>';
   }
 
@@ -214,7 +209,7 @@
   // 뒤로가기로 돌아왔을 때 버튼 복구
   window.addEventListener('pageshow', () => {
     const btn = document.getElementById('submit');
-    if (btn) { btn.disabled = false; btn.textContent = '무료로 가입하기 →'; }
+    if (btn) { btn.disabled = false; btn.textContent = '무료 레벨테스트 신청하기 →'; }
   });
 </script>
 </body>
